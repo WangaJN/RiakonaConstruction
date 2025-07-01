@@ -1,10 +1,11 @@
 /* using css variables to create a color pallette for the entire project */
 :root {
-  /* --background: #101114;
-    --primary-color: #1c1d20;
-    --secondary-color: #4a4d57;
-    --accent-color: #00ffc4;
-    --text-color: #f9f9f9; */
+  --background: #d9d9d9;
+  --primary-color: #1c1d20;
+  --secondary-color: #4a4d57;
+  --accent-color: #00ffc4;
+  --text-color: #f9f9f9;
+  --button-color: #1e0be0;
 }
 
 * {
@@ -26,7 +27,20 @@ body {
   flex-direction: column;
   align-items: center;
 }
+#bootstrap-overrides #cta {
+  min-height: 50px;
+  padding: 0.5em 1em;
+  border: none;
+  /* border-radius: 0 15px 15px 0; */
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--background) 0.3s ease-in-out;
+  border-radius: 20px;
+}
 
+/* LANDING PAGE */
 .landingpage {
   background-image: linear-gradient(
       to right,
@@ -46,4 +60,86 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 5%;
+}
+
+/* FOOTER */
+footer {
+  padding-top: 2%;
+  padding-left: 5.5%;
+  padding-right: 5.5%;
+  height: 75vh;
+}
+footer h1 {
+  display: flex;
+  justify-content: center;
+}
+.footer-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vl {
+  border-left: 1px solid;
+  height: 200px;
+}
+.footer-contact hr {
+  display: none;
+}
+
+/* From Uiverse.io by alexruix */
+.input-group,
+#emailSubscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+
+.input {
+  min-height: 50px;
+  width: 250px;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid var(--button-color);
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: var(--button-color);
+}
+
+.input:focus,
+.input:focus-visible {
+  border-color: #3898ec;
+  outline: none;
+}
+
+@media (max-width: 780px) {
+  .vl {
+    display: none;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact hr {
+    display: block;
+  }
 }
