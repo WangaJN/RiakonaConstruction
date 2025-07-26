@@ -52,9 +52,7 @@
           >
             <ul class="navbar-nav" style="gap: 6vw">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -63,7 +61,12 @@
                 <a class="nav-link" href="service.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="contact.html"
+                  >Contact</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="faq.html">FAQ</a>
@@ -73,53 +76,83 @@
         </div>
       </nav>
     </header>
+    <!-- CONTACT -->
+    <div class="contact">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="post"
+        id="contactForm"
+        name="contactForm"
+      >
+        <h1>Get in touch</h1>
+        <h6>Connect with us today</h6>
 
-    <!-- LANDING PAGE -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="6da247e8-ffec-40be-a765-6e03c09e6c8b"
+        />
 
-    <div class="landingpage row">
-      <div class="landingpage_text col-12">
-        <h1>Building the future with strength and integrity</h1>
-        <br />
-        <strong>
-          Riakona Construction is a trusted construction partner delivery high
-          quality, innovative building solutions across South Africa
-        </strong>
-        <br />
-        <button id="cta">View our projects</button>
-      </div>
-    </div>
-
-    <!-- SERVICES PAGE -->
-    <div class="service">
-      <h1>SERVICES</h1>
-      <hr style="width: 100%" />
-
-      <!-- Service cards -->
-
-      <div class="card mb-3" style="max-width: 800px">
-        <div class="row g-0">
-          <div class="col-md-4 fill">
-            <img
-              src="/images/PHOTO-2025-05-11-17-31-16.jpg"
-              class="img-fluid rounded-start"
-              alt="services_card_picture"
-            />
-          </div>
-          <div class="col-md-8 col-lg-6 card_text">
-            <div class="card-body">
-              <h5 class="card-title">Buillding</h5>
-              <hr />
-              <p class="card-text">
-                We offer full-scale building services for residential,
-                commercial, and industrial projects. From foundations to
-                roofing, our skilled team ensures durable structures built to
-                exact specifications and high standards.
-              </p>
-              <a href="#" class="btn btn-primary" id="cta">GET A QUOTE</a>
-            </div>
-          </div>
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Your Name*"
+            name="name"
+            id="name"
+            style="margin-top: 5%"
+            required
+          />
+          <label for="name" class="form__label">Your Name*</label>
         </div>
-      </div>
+
+        <div class="form__group field">
+          <input
+            type="input"
+            class="form__field"
+            placeholder="Your Email*"
+            name="email"
+            id="email"
+            style="margin-top: 5%"
+            required
+          />
+          <label for="email" class="form__label">Your Email*</label>
+        </div>
+
+        <div class="form__group field" style="margin-top: 5%">
+          <label for="email" class="form__label" style="font-size: 1.3rem"
+            >Subject*</label
+          >
+          <select class="contact-drop-down" name="option" id="option">
+            <option>Choose subject</option>
+            <option value="Building">Building</option>
+            <option value="Ceiling">Ceiling</option>
+            <option value="Renovating">Renovating</option>
+            <option value="PLasterig">Plasterig</option>
+            <option value="Tiling">Tiling</option>
+            <option value="Tiling">Paving</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form__group field" style="margin-top: 5%">
+          <textarea
+            class="form__field"
+            placeholder="Your Message*"
+            name="message"
+            id="message"
+            required
+          ></textarea>
+          <label for="message" class="form__label">Message*</label>
+        </div>
+        <button
+          class="button--submit contact_submit_btn"
+          value="submit"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
     </div>
     <!-- FOOTER -->
     <footer>

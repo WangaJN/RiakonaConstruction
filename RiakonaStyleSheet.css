@@ -39,6 +39,9 @@ body {
   cursor: pointer;
   transition: var(--background) 0.3s ease-in-out;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* LANDING PAGE */
@@ -62,9 +65,25 @@ body {
   align-items: center;
   margin-top: 5%;
 }
+/* homepage services  */
+/* ensure entire image fill the card */
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+}
+.fill img {
+  min-width: 90%;
+  min-height: 80%;
+}
+
+#card_text
 
 /* FOOTER */
 footer {
+  margin-left: 5%;
   padding-top: 2%;
   padding-left: 2%;
   padding-right: 2%;
@@ -143,4 +162,150 @@ footer h1 {
   .footer-contact hr {
     display: block;
   }
+}
+
+/* FAQ */
+.faq {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  flex-direction: column;
+}
+#questions {
+  width: 60%;
+}
+
+/*------------------ CONTACT ------------------------*/
+
+/* Core styling for form layout */
+.contactPageLanding,
+form {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  .contact {
+    width: 200px;
+  }
+}
+@media (min-width: 780px) {
+  .contact {
+    width: 450px;
+  }
+}
+form {
+  max-width: 600px;
+}
+
+/* Form group wrapper */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Input and textarea styling */
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: none;
+  font-size: 1.3rem;
+  color: #000;
+  padding: 10px 0;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+/* Label styling */
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  color: #9b9b9b;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+/* Floating label behavior */
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:focus + .form__label,
+.form__field:not(:placeholder-shown) + .form__label {
+  font-size: 0.85rem;
+  top: -20px;
+  color: #013185;
+  font-weight: 600;
+}
+
+/* On focus styling */
+.form__field:focus {
+  padding-bottom: 8px;
+  border-bottom: 3px solid #013185;
+  font-weight: 500;
+}
+
+/* Disable box-shadow for invalid states */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+/* Dropdown styling */
+.contact-drop-down {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  transition: border 0.3s ease;
+}
+
+.contact-drop-down:focus {
+  border-color: #013185;
+  outline: none;
+}
+
+/* Textarea tweaks */
+textarea.form__field {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button styling */
+.contact_submit_btn {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 0.75em 2em;
+  background-color: #013185;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact_submit_btn:hover {
+  background-color: #021d52;
+}
+
+/* Optional input text color override for contactPageLanding */
+.contactPageLanding input,
+.contactPageLanding textarea {
+  color: #000;
 }
