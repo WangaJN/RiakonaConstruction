@@ -29,19 +29,19 @@ body {
   overflow-x: hidden;
 }
 #bootstrap-overrides #cta {
-  min-height: 50px;
+  min-height: 30px;
+  width: 150px;
   padding: 0.5em 1em;
   border: none;
-  /* border-radius: 0 15px 15px 0; */
   background-color: var(--button-color);
   color: var(--text-color);
   font-size: 15px;
   cursor: pointer;
   transition: var(--background) 0.3s ease-in-out;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0px;
 }
 
 /* LANDING PAGE */
@@ -78,8 +78,6 @@ body {
   min-width: 90%;
   min-height: 80%;
 }
-
-#card_text
 
 /* FOOTER */
 footer {
@@ -164,8 +162,9 @@ footer h1 {
   }
 }
 
-/* FAQ */
-.faq {
+/* FAQ AND ABOUT */
+.faq,
+.about {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -173,8 +172,24 @@ footer h1 {
   padding-bottom: 2%;
   flex-direction: column;
 }
-#questions {
+#questions,
+.about_section {
   width: 60%;
+}
+.about {
+  text-align: center;
+  /* background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    ),
+    url("images/PHOTO-2025-05-11-17-31-15.jpg"); */
+}
+
+.about h6 {
+  display: flex;
+  justify-content: center;
+  color: #013185;
 }
 
 /*------------------ CONTACT ------------------------*/
