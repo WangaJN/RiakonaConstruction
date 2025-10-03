@@ -55,7 +55,7 @@ body {
     ),
     url("images/landingpage.jpg");
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   background-size: cover;
   color: white;
   padding: 20px;
@@ -183,15 +183,7 @@ footer h1 {
 .about_section {
   width: 60%;
 }
-/* .about p {
-  text-align: justify;
-  /* background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0)
-    ),
-    url("images/PHOTO-2025-05-11-17-31-15.jpg"); */
-/* } */
+
 */ .about h6 {
   display: flex;
   justify-content: center;
@@ -221,7 +213,7 @@ form {
   }
 }
 form {
-  max-width: 600px;
+  max-width: 700px;
 }
 .contact {
   background-image: linear-gradient(
@@ -230,7 +222,7 @@ form {
       rgba(0, 0, 0, 0)
     ),
     url("images/contact_landing_image.jpg");
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
   color: white;
   padding: 20px;
@@ -240,6 +232,7 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 /* Form group wrapper */
 .form__group {
   position: relative;
