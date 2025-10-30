@@ -13,22 +13,26 @@
 </head>
 
 <body id="bootstrap-overrides">
+  <!-- Header with Navbar -->
   <header>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed sticky">
-      <div class="container-xxl" style="width: 100vw">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm">
+      <div class="container-fluid justify-content-between">
+        <!-- Logo -->
         <a class="navbar-brand" href="#">
-          <img src="/images/logo.png" alt="Bootstrap" width="150" height="120" />
+          <img src="/images/logo.png" alt="Riakona Logo" width="150" height="120" />
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 10vw">
-          <ul class="navbar-nav" style="gap: 6vw">
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <ul class="navbar-nav ms-auto " style="gap: 6vw">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
@@ -37,7 +41,7 @@
               <a class="nav-link" href="service.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contact.html" style="color: #013185">Contact</a>
+              <a class="nav-link active" href="contact.html" style="color: #013185;">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="faq.html">FAQ</a>

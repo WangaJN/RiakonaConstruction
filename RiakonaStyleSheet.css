@@ -53,12 +53,25 @@ body {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0)
     ),
-    url("images/landingpage.jpg");
+    url("images/background1.jpg");
   width: 100%;
   height: 75vh;
   background-size: cover;
+  background-position: center;
   color: white;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  .landingpage {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("images/background1.jpg");
+    background-position: center top;
+    padding: 40px 20px;
+  }
 }
 .landingpage_text {
   display: flex;
@@ -72,6 +85,24 @@ body {
 .landingpage_text strong {
   text-align: justify; /* makes the paragraph stretch neatly */
 }
+
+.service-title-container .special-heading-border {
+  width: 80px; /* Width of the line */
+  height: 3px; /* Thickness of the line */
+  background-color: #0d6efd; /* A default blue, change this to your brand color */
+  margin-top: 0.5rem;
+}
+
+/* This targets the small line inside each service card */
+.card .short-hr {
+  width: 50px; /* Width of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: #6c757d; /* A subtle grey, change as needed */
+  opacity: 0.5;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 /* homepage services  */
 /* ensure entire image fill the card */
 .fill {
@@ -190,6 +221,63 @@ footer h1 {
   color: #013185;
 }
 
+.about {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    ),
+    url("images/background2.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Media query for smaller screens (768px and down) */
+@media (max-width: 768px) {
+  .about {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("images/background2.jpg");
+
+    background-position: center top;
+    padding: 40px 20px;
+  }
+}
+
+.faq {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0)
+    ),
+    url("images/background3.jpg");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Media query for smaller screens (768px and down) */
+@media (max-width: 768px) {
+  .faq {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("images/background3.jpg");
+
+    background-position: center top;
+    padding: 40px 20px;
+  }
+}
 /*------------------ CONTACT ------------------------*/
 
 /* Core styling for form layout */
@@ -224,9 +312,10 @@ form {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0)
     ),
-    url("images/contact_landing_image.jpg");
+    url("images/background5.jpg");
   height: 100vh;
   background-size: cover;
+  background-position: center;
   color: white;
   padding: 20px;
   width: 100%;
@@ -235,7 +324,19 @@ form {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .contact {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("images/background5.jpg");
 
+    background-position: center top;
+    padding: 40px 20px;
+  }
+}
 /* Form group wrapper */
 .form__group {
   position: relative;
