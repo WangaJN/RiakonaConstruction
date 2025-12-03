@@ -31,7 +31,7 @@ html {
 
 body {
   min-height: 100vh;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -58,6 +58,12 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 0px;
+}
+
+#logo_button {
+  border-radius: 30px 0 30px 0;
+  background-color: var(--button-color);
+  color: var(--text-color);
 }
 
 /* TEAM CAROUSEL & FLIP CARDS */
@@ -204,11 +210,11 @@ header {
   transform: rotateY(180deg);
   justify-content: center;
   padding: 2rem;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--brand-blue);
 }
 
 .flip-card-back h3 {
-  color: var(--accent-color);
+  color: var(--brand-blue);
   margin: 0;
 }
 
@@ -331,10 +337,17 @@ header {
   align-items: center;
   text-align: center;
   margin-top: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .landingpage_text strong {
   text-align: justify;
+}
+@media (max-width: 650px) {
+  .landingpage_text strong {
+    font-size: medium;
+  }
 }
 
 /* 4. ABOUT & FAQ */
@@ -355,15 +368,25 @@ header {
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0.7)
     ),
     url("images/background2.jpg");
 }
 
-.about h6 {
+.about h6,
+.faq h6 {
   display: flex;
   justify-content: center;
   color: #377aef;
+}
+.about p {
+  text-align: justify;
+}
+@media (max-width: 650px) {
+  .about p {
+    text-align: left;
+    font-size: 14px;
+  }
 }
 
 .about_section {
@@ -373,8 +396,8 @@ header {
 .faq {
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
     ),
     url("images/background3.jpg");
 }
@@ -650,4 +673,13 @@ footer h1 {
       ),
       url("images/background5.jpg");
   }
+  .carousel a {
+    font-size: 18px;
+  }
+}
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
 }
