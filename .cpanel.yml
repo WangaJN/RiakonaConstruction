@@ -1,14 +1,15 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/riakonq5f5p5/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp about.html $DEPLOYPATH
-    - /bin/cp services.html $DEPLOYPATH
-    - /bin/cp faq.html $DEPLOYPATH
-    - /bin/cp contact.html $DEPLOYPATH
-    - /bin/cp sitemap.xml $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/chmod -R 755 /home/riakonq5f5p5/public_html
+      - export DEPLOYPATH=/home/riakonq5f5p5/public_html/
+      - /bin/cp index.html $DEPLOYPATH
+      - /bin/cp about.html $DEPLOYPATH
+      - /bin/cp services.html $DEPLOYPATH
+      - /bin/cp faq.html $DEPLOYPATH
+      - /bin/cp contact.html $DEPLOYPATH
+      - /bin/cp sitemap.xml $DEPLOYPATH
+      - /bin/cp .htaccess $DEPLOYPATH
+      - /bin/cp -R css $DEPLOYPATH
+      - /bin/cp -R js $DEPLOYPATH
+      - /bin/cp -R images $DEPLOYPATH
