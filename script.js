@@ -5,7 +5,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(form);
-  formData.append("access_key", "d536f1de-14f8-46c9-b94c-54c71518fbb8");
+  formData.append("access_key", "28d1a3ad-bf05-4d84-8f84-b0d51e27ed9b");
 
   const originalText = submitBtn.textContent;
 
@@ -41,7 +41,7 @@ contact_form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const formData = new FormData(contact_form);
-  formData.append("access_key", "8bb18cf2-c57d-4a86-8d80-0fef4af03b73");
+  formData.append("access_key", "1a72941b-eaeb-4fec-bc60-5baf753f8532");
 
   const originalText = submitButton.textContent;
 
@@ -57,7 +57,9 @@ contact_form.addEventListener("submit", async (e) => {
     const data = await response.json();
 
     if (response.ok) {
-      alert("Success! Your message has been sent.");
+      alert(
+        "Thanks for reaching out! We've received your message, and a member of our team will get back to you soon.",
+      );
       contact_form.reset();
     } else {
       alert("Error: " + data.message);
